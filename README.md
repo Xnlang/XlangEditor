@@ -1,15 +1,16 @@
 XlangEditor
 ===========
 
-http://xnlang.cn/XlangEditor/php/demo.php
+http://xnlang.cn/XlangEditor/
 ===
-<head>
+
   <link rel="stylesheet" href="http://Xnlang.cn/XlangEditor/themes/default/default.css" />
   <link rel="stylesheet" href="http://Xnlang.cn/XlangEditor/plugins/code/prettify.css" />
   <script charset="utf-8" src="http://xnlang.cn/XlangEditor/XlangEditor.js"></script>
   <script charset="utf-8" src="http://Xnlang.cn/XlangEditor/lang/zh_CN.js"></script>
   <script charset="utf-8" src="http://Xnlang.cn/XlangEditor/XlangEditor/plugins/code/prettify.js"></script>
   <script>
+  <head>
   <script type='text/javascript'>
 		XlangEditor.ready(function(X) {
 			var editor1 = X.create('textarea[name="content1"]', {
@@ -18,14 +19,14 @@ http://xnlang.cn/XlangEditor/php/demo.php
 				fileManagerJson : 'http://Xnlang.cn/XlangEditor/php/file_manager_json.php',
 				allowFileManager : true,
 				afterCreate : function() {
-					var self = this;
+				var self = this;
 					X.ctrl(document, 13, function() {
 						self.sync();
-						X('form[name=example]')[0].submit();
+					X('form[name=example]')[0].submit();
 					});
 					X.ctrl(self.edit.doc, 13, function() {
 						self.sync();
-						X('form[name=example]')[0].submit();
+					X('form[name=example]')[0].submit();
 					});
 				}
 			});
@@ -34,14 +35,12 @@ http://xnlang.cn/XlangEditor/php/demo.php
 	</script>
 </head>
 <body>
-	<?php echo $htmlData; ?>
 	<form name="example" method="post" action="demo.php">
-		<textarea name="content1" style="width:700px;height:200px;visibility:hidden;"><?php echo htmlspecialchars($htmlData); ?></textarea>
+		<textarea name="content1" style="width:700px;height:200px;visibility:hidden;"></textarea>
 		<br />
 		<input type="submit" name="button" value="提交内容" /> (提交快捷键: Ctrl + Enter)
 	</form>
 </body>
-
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
