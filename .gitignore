@@ -5,3 +5,11 @@ app/tmp/*
 app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
+
+JSON.php
+
+demo.php
+
+file_manager_json.php
+
+upload_json.php
