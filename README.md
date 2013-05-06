@@ -3,31 +3,19 @@ XlangEditor
 
 http://xnlang.cn/XlangEditor/php/demo.php
 ===
-<?php
-  $htmlData = '';
-   if (!empty($_POST['content1'])) {
-		if (get_magic_quotes_gpc()) {
-			$htmlData = stripslashes($_POST['content1']);
-		} else {
-			$htmlData = $_POST['content1'];
-		}
-	}
-?>
-<html>
 <head>
-	<meta charset="utf-8" />
-	<title>XlangEditor PHP</title>
-	<link rel="stylesheet" href="https://github.com/Xnlang/XlangEditor/blob/master/default.css" />
-	<link rel="stylesheet" href="https://github.com/Xnlang/XlangEditor/blob/master/prettify.css" />
-	<script charset="utf-8" src="https://github.com/Xnlang/XlangEditor/blob/master/XlangEditor.js"></script>
-	<script charset="utf-8" src="https://github.com/Xnlang/XlangEditor/blob/master/zh_CN.js"></script>
-	<script charset="utf-8" src="https://github.com/Xnlang/XlangEditor/blob/master/prettify.js"></script>
-	<script>
-		XlangEditor.ready(function(X){
+  <link rel="stylesheet" href="https://Xnlang.cn/XlangEditor/themes/default/default.css" />
+  <link rel="stylesheet" href="https://Xnlang.cn/XlangEditor/plugins/code/prettify.css" />
+  <script charset="utf-8" src="https://xnlang.cn/XlangEditor/XlangEditor.js"></script>
+  <script charset="utf-8" src="https://Xnlang.cn/XlangEditor/lang/zh_CN.js"></script>
+  <script charset="utf-8" src="https://Xnlang.cn/XlangEditor/plugins/code/prettify.js"></script>
+  <script>
+  <script type='text/javascript'>
+		XlangEditor.ready(function(X) {
 			var editor1 = X.create('textarea[name="content1"]', {
-				cssPath : 'https://github.com/Xnlang/XlangEditor/blob/master/prettify.css',
-				uploadJson : 'https://github.com/Xnlang/XlangEditor/blob/master/upload_json.php',
-				fileManagerJson : 'https://github.com/Xnlang/XlangEditor/blob/master/file_manager_json.php',
+				cssPath : 'https://Xnlang.cn/XlangEditor/themes/default/prettify.css',
+				uploadJson : 'https://Xnlang.cn/XlangEditor/php/upload_json.php',
+				fileManagerJson : 'https://Xnlang.cn/XlangEditor/php/file_manager_json.php',
 				allowFileManager : true,
 				afterCreate : function() {
 					var self = this;
@@ -53,7 +41,6 @@ http://xnlang.cn/XlangEditor/php/demo.php
 		<input type="submit" name="button" value="提交内容" /> (提交快捷键: Ctrl + Enter)
 	</form>
 </body>
-</html>
 
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
