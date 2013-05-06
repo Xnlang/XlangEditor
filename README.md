@@ -4,18 +4,18 @@ XlangEditor
 http://xnlang.cn/XlangEditor/php/demo.php
 ===
 <head>
-  <link rel="stylesheet" href="https://Xnlang.cn/XlangEditor/themes/default/default.css" />
-  <link rel="stylesheet" href="https://Xnlang.cn/XlangEditor/plugins/code/prettify.css" />
-  <script charset="utf-8" src="https://xnlang.cn/XlangEditor/XlangEditor.js"></script>
-  <script charset="utf-8" src="https://Xnlang.cn/XlangEditor/lang/zh_CN.js"></script>
-  <script charset="utf-8" src="https://Xnlang.cn/XlangEditor/plugins/code/prettify.js"></script>
+  <link rel="stylesheet" href="http://Xnlang.cn/XlangEditor/themes/default/default.css" />
+  <link rel="stylesheet" href="http://Xnlang.cn/XlangEditor/plugins/code/prettify.css" />
+  <script charset="utf-8" src="http://xnlang.cn/XlangEditor/XlangEditor.js"></script>
+  <script charset="utf-8" src="http://Xnlang.cn/XlangEditor/lang/zh_CN.js"></script>
+  <script charset="utf-8" src="http://Xnlang.cn/XlangEditor/XlangEditor/plugins/code/prettify.js"></script>
   <script>
   <script type='text/javascript'>
 		XlangEditor.ready(function(X) {
 			var editor1 = X.create('textarea[name="content1"]', {
-				cssPath : 'https://Xnlang.cn/XlangEditor/themes/default/prettify.css',
-				uploadJson : 'https://Xnlang.cn/XlangEditor/php/upload_json.php',
-				fileManagerJson : 'https://Xnlang.cn/XlangEditor/php/file_manager_json.php',
+				cssPath : 'http://Xnlang.cn/XlangEditor/themes/default/prettify.css',
+				uploadJson : 'http://Xnlang.cn/XlangEditor/php/upload_json.php',
+				fileManagerJson : 'http://Xnlang.cn/XlangEditor/php/file_manager_json.php',
 				allowFileManager : true,
 				afterCreate : function() {
 					var self = this;
